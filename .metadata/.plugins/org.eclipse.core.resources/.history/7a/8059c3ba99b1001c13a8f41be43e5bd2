@@ -1,0 +1,62 @@
+package Thi;
+
+import java.util.Scanner;
+
+
+public class Bai1 {
+	public static void main(String[] args) {
+		String chuoi;
+	    char[] kyTu = null;
+	    Scanner scanner = new Scanner(System.in);
+	  
+	    System.out.println("Nhap chuoi: ");
+	    chuoi = scanner.nextLine();
+	    
+	    for (int i = 0; i < chuoi.length(); i++) {
+	        kyTu[i] = chuoi.charAt(i);
+	        
+	    }
+	    System.out.println(kyTu);
+	    int check;
+	    if(isInteger(chuoi,10)) check = 1;
+	    else check = 0;
+	    String KQ="";
+	    if(check==1) {
+	    	if(CheckChiaHet(chuoi)==true) {
+	    		int n;
+	    		for (int i = 0; i < chuoi.length(); i++) {
+	    	        if (kyTu[i]==30 || kyTu[i]==35) {
+	    	        	n = kyTu[i];
+	    	        	kyTu[i] = kyTu[chuoi.length()-1];
+	    	        	kyTu[chuoi.length()-1] = (char) n;
+	    	        }	
+	    	    }
+	    		
+	    	}
+	    	else System.out.print("-1");
+	    }
+	    else System.out.print("Chuoi khong phai va so nguyen");
+	}
+	public static boolean CheckChiaHet(String s) {
+		int T=0;
+		int check5 =0;
+		for (int i = 0; i < s.length(); i++) {
+	        T += s.charAt(i);
+	        if (s.charAt(i)==30 || s.charAt(i)==35) {
+	        	check5 = 1;
+	        }
+	        	
+	    }
+		if(check5==1 && T%9==0) {
+			return true;
+		}
+		return false;
+	}
+	public static boolean isInteger(String chuoi, int i) {
+		return isInteger(chuoi,10);
+	}
+	
+    
+	
+	
+}

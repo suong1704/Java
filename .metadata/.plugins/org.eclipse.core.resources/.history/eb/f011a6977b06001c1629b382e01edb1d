@@ -1,0 +1,53 @@
+package demo;
+
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class DemChuoi extends JFrame{
+	public static void main(String[] args) {
+		new DemChuoi();
+	}
+	public DemChuoi() {
+		this.setTitle("");
+		this.setSize(500, 300);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new BoxLayout(getContentPane(), MAXIMIZED_BOTH));
+		
+		JPanel p1 = new JPanel();
+		p1.setLayout(new GridLayout(3,2));
+		JLabel l1 = new JLabel("Nhap chuoi:");
+		p1.add(l1);
+		JTextField t1 = new JTextField();
+		p1.add(t1);
+		JLabel l2 = new JLabel("Thuc hien:");
+		p1.add(l2);
+		JTextField t2 = new JTextField();
+		p1.add(t2);
+		JLabel l3 = new JLabel("Ket Qua:");
+		p1.add(l3);
+		JTextField t3= new JTextField();
+		t3.setSize(200, 50);
+		p1.add(t3);
+		this.add(p1);
+		
+		JPanel p2 = new JPanel();
+		JButton b1 = new JButton("View");
+		p2.add(b1);
+		JButton b2 = new JButton("Edit");
+		p2.add(b2);
+		JButton b3 = new JButton("Reset");
+		p2.add(b3);
+		this.add(p2);
+		this.setVisible(true);
+		}
+
+	
+	
+}

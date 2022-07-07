@@ -1,0 +1,23 @@
+package demo;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class DemChuoi extends JFrame{
+	public static void main(String[] args) {
+		new DemChuoi();
+	}
+	public DemChuoi() {
+		this.setTitle("");
+		this.setSize(500, 300);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout());
+		
+		JPanel p1 = new JPanel();
+		JLabel l1 = new 
+	}
+
+}

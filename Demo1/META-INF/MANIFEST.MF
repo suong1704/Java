@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Demo1
+Bundle-SymbolicName: Demo1
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: Demo1
+Bundle-RequiredExecutionEnvironment: JavaSE-16

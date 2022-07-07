@@ -1,0 +1,36 @@
+package demo;
+
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+import com.sun.java.swing.action.NewAction;
+
+public class TinhToan extends JFrame{
+	public static void main(String[] args) {
+		new TinhToan();
+	}
+	public TinhToan() {
+		this.setTitle("Tinh Toan");
+		this.setSize(400,500);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		this.setLayout(new GridLayout(4,1));
+		
+		JLabel l1 = new JLabel("Minh hoa cac phep toan");
+		this.add(l1);
+		
+		JLabel l2 = new JLabel();
+		l2.setLayout(new GridLayout(3,2));
+		JLabel p1 = new JLabel("Nhap a:");
+		JLabel  p2 = new JLabel("Nhap b:");
+		JLabel p3 = new JLabel("Ket qua:");		
+		JTextField t1 = new JTextField();	
+		JTextField t2 = new JTextField();
+		JTextField t3 = new JTextField();
+		l2.add(p1,t1,p2,t2,p3,t3);
+	}
+}
